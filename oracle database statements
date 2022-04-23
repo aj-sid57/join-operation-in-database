@@ -1,0 +1,70 @@
+create table patients (id number primary key, name varchar2(10),illness varchar2(20))
+**
+create view docview as select * from patients
+**
+desc patients
+**
+desc patients
+**
+desc docview
+**
+insert into patients values (11,'mani','fewer')
+**
+insert into patients values (20,'nantha','fracture')
+**
+select * from patients
+**
+select * from docview
+**
+insert into docview values (30,'siva','tyroid') 
+**
+select * from patients
+**
+select * from docview
+**
+create view receptionist  as select id from patients
+**
+desc receptionist 
+**
+insert into receptionist  values (40)
+**
+select * from patients
+**
+update patients set name ='raj' where id=40
+**
+update patients set illness ='heart attack' where id=40
+**
+select * from receptionist 
+**
+select * from docview
+**
+delete from receptionist  where id=30
+**
+select * from patients
+**
+create view hospitalmanagement  as select name from patients
+**
+select * from hospitalmanagement
+**
+update hospitalmanagement set name = 'ram' where name = 'raj'
+**
+select * from patients
+**
+delete from hospitalmanagement where name = 'ram'
+**
+select * from hospitalmanagement
+**
+create table  student  (id number primary key, name varchar2(10))
+**
+create table  student  (id number primary key, name varchar2(10))
+**
+desc student
+**
+SELECT Students.admission, Students.firstName, Students.lastName, Fee.amount_paid  FROM Students  INNER JOIN Fee  ON Students.admission = Fee.admission
+**
+SELECT Students.admission, Students.firstName, Students.lastName, Fee.amount_paid  FROM Students  LEFT OUTER JOIN Fee  ON Students.admission = Fee.admission
+**
+SELECT Students.admission, Students.firstName, Students.lastName, Fee.amount_paid  FROM Students  RIGHT OUTER JOIN Fee  ON Students.admission = Fee.admission
+**
+SELECT Students.admission, Students.firstName, Students.lastName, Fee.amount_paid  FROM Students  FULL OUTER JOIN Fee  ON Students.admission = Fee.admission
+
